@@ -98,7 +98,7 @@ if uploaded_file:
             file_name='predicted_vs_actual.csv',
             mime='text/csv',
             
-            fig, ax = plt.subplots()
+           fig, ax = plt.subplots()
             ax.scatter(y_test, y_pred, alpha=0.5)
             ax.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--')
             ax.set_xlabel("Actual")
