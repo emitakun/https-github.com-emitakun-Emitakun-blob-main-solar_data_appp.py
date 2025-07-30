@@ -84,12 +84,12 @@ if uploaded_file:
             st.write(f"R-squared Score: {r2_score(y_test, y_pred):.2f}")
 
             # Create and display a table of actual vs predicted values
-              results_df = pd.DataFrame({
-              "Actual": y_test.values,
-              "Predicted": y_pred
-              })
-              st.subheader("Actual vs Predicted Values")
-              st.dataframe(results_df.head(20))
+             results_df = pd.DataFrame({
+             "Actual": y_test.values,
+             "Predicted": y_pred
+            })
+             st.subheader("Actual vs Predicted Values")
+             st.dataframe(results_df.head(20))
 
 
             fig, ax = plt.subplots()
