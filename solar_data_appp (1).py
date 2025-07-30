@@ -79,6 +79,19 @@ if uploaded_file:
             st.write(f"Mean Squared Error: {mean_squared_error(y_test, y_pred):.2f}")
             st.write(f"R-squared Score: {r2_score(y_test, y_pred):.2f}")
 
+            st.write("**Model Performance:**")
+            st.write(f"Mean Squared Error: {mean_squared_error(y_test, y_pred):.2f}")
+            st.write(f"R-squared Score: {r2_score(y_test, y_pred):.2f}")
+
+            # Create and display a table of actual vs predicted values
+              results_df = pd.DataFrame({
+              "Actual": y_test.values,
+              "Predicted": y_pred
+              })
+st.subheader("Actual vs Predicted Values")
+st.dataframe(results_df.head(20))
+
+
             fig, ax = plt.subplots()
             ax.scatter(y_test, y_pred, alpha=0.5)
             ax.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--')
