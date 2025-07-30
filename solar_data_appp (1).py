@@ -91,14 +91,12 @@ if uploaded_file:
             st.subheader("Actual vs Predicted Values")
             st.dataframe(results_df.head(20))
 
-            import io
-
-           csv = results_df.to_csv(index=False)
-           st.download_button(
-           label="Download Predictions as CSV",
-           data=csv,
-           file_name='predicted_vs_actual.csv',
-           mime='text/csv',
+            csv = results_df.to_csv(index=False)
+            st.download_button(
+            label="Download Predictions as CSV",
+            data=csv,
+            file_name='predicted_vs_actual.csv',
+            mime='text/csv',
             
             fig, ax = plt.subplots()
             ax.scatter(y_test, y_pred, alpha=0.5)
