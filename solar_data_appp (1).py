@@ -79,9 +79,9 @@ if uploaded_file:
             st.write(f"Mean Squared Error: {mean_squared_error(y_test, y_pred):.2f}")
             st.write(f"R-squared Score: {r2_score(y_test, y_pred):.2f}")
 
-            st.write("**Model Performance:**")
-            st.write(f"Mean Squared Error: {mean_squared_error(y_test, y_pred):.2f}")
-            st.write(f"R-squared Score: {r2_score(y_test, y_pred):.2f}")
+            #st.write("**Model Performance:**")
+            #st.write(f"Mean Squared Error: {mean_squared_error(y_test, y_pred):.2f}")
+            #st.write(f"R-squared Score: {r2_score(y_test, y_pred):.2f}")
 
             # Create and display a table of actual vs predicted values
             results_df = pd.DataFrame({
