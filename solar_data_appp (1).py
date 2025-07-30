@@ -108,6 +108,5 @@ if uploaded_file:
             st.pyplot(fig)
         else:
             st.warning("Please select at least one feature variable.")
-)
 else:
     st.info("Please upload a CSV file to begin.")
