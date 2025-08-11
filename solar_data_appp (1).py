@@ -11,12 +11,21 @@ st.set_page_config(page_title="Solar Data Analysis", layout="wide")
 st.title("Solar Production Data Analysis")
 
 uploaded_file = st.sidebar.file_uploader("Upload your solar CSV file", type=["csv"])
+st.sidebar.write("Uploaded file should contain the below headers/columns:")
+st.sidebar.code(
+""" Site_ID                      object 
+ 1   Date                     object 
+ 2   Solar_Irradiance_kWh/m2  float64
+ 3   Energy_Generated_kWh     float64
+ 4   Battery_SOC_%            float64
+ 5   Load_Consumed_kWh        float64
+ 6   Generator_Run_Hours      float64
+ 7   Ambient_Temperature_C    float64""")
 
 if uploaded_file:
     df = pd.read_csv(uploaded_file)
     st.subheader("Dataset Preview")
     st.dataframe(df.head())
-    st.write(f"Enter CSV in the below format:\n{df.head()}")
 
     st.subheader("Dataset Info")
    # buffer = []
