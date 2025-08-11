@@ -16,6 +16,7 @@ if uploaded_file:
     df = pd.read_csv(uploaded_file)
     st.subheader("Dataset Preview")
     st.dataframe(df.head())
+    st.write(f"Enter CSV in the below format:\n{df.head()}")
 
     st.subheader("Dataset Info")
    # buffer = []
